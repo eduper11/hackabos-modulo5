@@ -1,0 +1,15 @@
+<div class="jumbotron bg-primary text-white">
+  <h1 class="display-4">Welcome</h1>
+
+  <p class="lead">
+    The Social Network. A space for sharing
+  </p>
+
+  <hr class="my-4 bg-white" />
+
+  <ul class="list-unstyled">
+    <li *ngFor="let row of rows">
+      <h3><i [class]="row.icon"></i>{{ row.message }}</h3>
+    </li>
+  </ul>
+</div>
