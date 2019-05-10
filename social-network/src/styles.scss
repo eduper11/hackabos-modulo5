@@ -17,3 +17,22 @@ $btn-border-radius: 0.25rem;
 $enable-responsive-font-sizes: true;
 
 @import "~node_modules/bootstrap/scss/bootstrap.scss";
+
+.ng-touched.ng-invalid {
+  @extend .is-invalid;
+}
+
+.ng-touched.ng-valid {
+  @extend .is-valid;
+}
+
+.is-invalid,
+.is-valid {
+  .invalid-feedback {
+    display: block;
+  }
+}
+
+a {
+  cursor: pointer !important;
+}

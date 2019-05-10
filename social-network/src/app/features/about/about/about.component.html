@@ -1,0 +1,23 @@
+<section class="container-fluid p-4">
+  <h1>{{ infoItems.title }}</h1>
+  <h2>{{ infoItems.presentation }}</h2>
+  <hr class="bg-light" />
+  <section>
+    <p>
+      {{ infoItems.description }}
+    </p>
+    <ul class="row">
+      <li *ngFor="let link of links" class="font-weight-bold pr-4">
+        <i [class]="link.icon"></i>
+        <a href="{{ link.URL }}">{{ link.name }}</a>
+      </li>
+    </ul>
+    <hr class="light" />
+    <p>
+      {{ infoItems.contact }}
+    </p>
+    <p class="font-weight-bold">
+      {{ infoItems.email }}
+    </p>
+  </section>
+</section>

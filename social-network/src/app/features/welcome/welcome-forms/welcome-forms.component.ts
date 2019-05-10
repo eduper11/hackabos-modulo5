@@ -4,4 +4,10 @@ import { Component } from "@angular/core";
   selector: "sn-welcome-forms",
   templateUrl: "./welcome-forms.component.html"
 })
-export class WelcomeFormsComponent {}
+export class WelcomeFormsComponent {
+  isRegisterFormVisible = true;
+
+  toggleForm(isRegisterClick) {
+    this.isRegisterFormVisible = isRegisterClick;
+  }
+}

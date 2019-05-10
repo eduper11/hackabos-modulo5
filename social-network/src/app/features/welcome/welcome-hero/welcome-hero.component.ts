@@ -2,12 +2,19 @@ import { Component, Input } from "@angular/core";
 
 @Component({
   selector: "sn-welcome-hero",
-  templateUrl: "./welcome-hero.component.html"
+  templateUrl: "./welcome-hero.component.html",
+  styles: [
+    `
+      i {
+        width: 40px;
+      }
+    `
+  ]
 })
 export class WelcomeHeroComponent {
-  @Input() rows;
+  @Input() rows: HeroItem[];
 
-  getIconColor(row) {
+  getIconColor(row: HeroItem) {
     if (row.id === 2) {
       return "green";
     }

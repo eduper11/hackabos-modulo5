@@ -8,8 +8,12 @@ const routes: Routes = [
     pathMatch: "full"
   },
   {
-    path: "",
+    path: "welcome",
     loadChildren: "./features/welcome/welcome.module#WelcomeModule"
+  },
+  {
+    path: "about",
+    loadChildren: "./features/about/about.module#AboutModule"
   }
 ];
 

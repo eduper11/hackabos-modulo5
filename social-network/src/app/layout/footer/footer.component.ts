@@ -5,7 +5,7 @@ import { Component } from "@angular/core";
   template: `
     <nav class="navbar navbar-dark bg-primary text-light">
       <span>@Edu 2019</span>
-      <a class="btn btn-link">About</a>
+      <a class="btn btn-link text-white" routerLink="/about">About</a>
     </nav>
   `,
   styles: []

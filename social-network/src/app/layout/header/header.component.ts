@@ -4,7 +4,7 @@ import { Component } from "@angular/core";
   selector: "sn-header",
   template: `
     <nav class="navbar navbar-dark bg-primary">
-      <a class="navbar-brand" href="#"
+      <a class="navbar-brand text-white" routerLink="/welcome"
         ><i class="fas fa-users"></i>The Social Network</a
       >
     </nav>

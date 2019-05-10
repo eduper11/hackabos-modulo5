@@ -13,7 +13,7 @@ import { Component } from "@angular/core";
   ]
 })
 export class WelcomeComponent {
-  heroItems = [
+  heroItems: HeroItem[] = [
     { id: 1, icon: "fa fa-search", message: "Find people like you" },
     { id: 1, icon: "fa fa-users", message: "Build you friends network" },
     { id: 1, icon: "fa fa-comments", message: "Keep in touch" }
