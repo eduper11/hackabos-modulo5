@@ -7,7 +7,7 @@ import { FormGroup } from "@angular/forms";
 export class MarkAsTouchedDirective {
   @Input() snMarkAsTouched: FormGroup;
 
-  @HostListener("submit", ["$event"]) onsubmit(event) {
+  @HostListener("submit", ["$event"]) onSubmit(event) {
     Object.values(this.snMarkAsTouched.controls).forEach(control =>
       control.markAsTouched()
     );

@@ -5,21 +5,25 @@ import { LoginComponent } from "./components/login/login.component";
 import { RegisterComponent } from "./components/register/register.component";
 import { ValidationMessagesComponent } from "./components/validation-messages/validation-messages.component";
 import { HttpClientModule } from "@angular/common/http";
-import { MarkAsTouchedDirective } from './directives/mark-as-touched.directive';
+import { MarkAsTouchedDirective } from "./directives/mark-as-touched.directive";
+import { NavComponent } from "./components/nav/nav/nav.component";
+import { RouterModule } from "@angular/router";
 
 @NgModule({
   declarations: [
     LoginComponent,
     RegisterComponent,
     ValidationMessagesComponent,
-    MarkAsTouchedDirective
+    MarkAsTouchedDirective,
+    NavComponent
   ],
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule, RouterModule],
   exports: [
     LoginComponent,
     RegisterComponent,
     ValidationMessagesComponent,
-    HttpClientModule
+    HttpClientModule,
+    NavComponent
   ]
 })
 export class SharedModule {}

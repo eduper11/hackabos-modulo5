@@ -1,9 +1,7 @@
 import { Component } from "@angular/core";
 import { FormBuilder, Validators } from "@angular/forms";
-import { validateConfig } from "@angular/router/src/config";
-import { environment } from "src/environments/environment";
-import { HttpClient } from "@angular/common/http";
 import { AuthService } from "src/app/core/services/auth.service";
+import { MatchPasswordValidator } from "../../components/validators/match-password.validator";
 
 @Component({
   selector: "sn-register",
@@ -11,12 +9,15 @@ import { AuthService } from "src/app/core/services/auth.service";
   styleUrls: []
 })
 export class RegisterComponent {
-  registerForm = this.fb.group({
-    fullname: ["", [Validators.required, Validators.minLength(3)]],
-    email: ["", [Validators.required, Validators.email]],
-    password: ["", [Validators.required, Validators.minLength(6)]],
-    confirmPassword: ["", [Validators.required]]
-  });
+  registerForm = this.fb.group(
+    {
+      fullName: ["", [Validators.required, Validators.minLength(3)]],
+      email: ["", [Validators.required, Validators.email]],
+      password: ["", [Validators.required, Validators.minLength(6)]],
+      confirmPassword: ["", [Validators.required]]
+    },
+    { validators: MatchPasswordValidator }
+  );
 
   constructor(private fb: FormBuilder, private authService: AuthService) {}
 
