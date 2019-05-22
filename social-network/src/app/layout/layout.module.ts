@@ -6,14 +6,22 @@ import { RouterModule } from "@angular/router";
 import { MainLayoutComponent } from "./main-layout/main-layout.component";
 import { ModalComponent } from "./modal/modal.component";
 import { SharedModule } from "../shared/shared.module";
+import { ToastComponent } from "./toast/toast.component";
 @NgModule({
   declarations: [
     HeaderComponent,
     FooterComponent,
     MainLayoutComponent,
-    ModalComponent
+    ModalComponent,
+    ToastComponent
   ],
   imports: [CommonModule, RouterModule, SharedModule],
-  exports: [HeaderComponent, FooterComponent, MainLayoutComponent]
+  exports: [
+    HeaderComponent,
+    FooterComponent,
+    MainLayoutComponent,
+    ModalComponent,
+    ToastComponent
+  ]
 })
 export class LayoutModule {}

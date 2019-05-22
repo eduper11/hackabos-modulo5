@@ -7,7 +7,10 @@ import { ValidationMessagesComponent } from "./components/validation-messages/va
 import { HttpClientModule } from "@angular/common/http";
 import { MarkAsTouchedDirective } from "./directives/mark-as-touched.directive";
 import { NavComponent } from "./components/nav/nav/nav.component";
+import { AvatarComponent } from "./components/avatar/avatar.component";
 import { RouterModule } from "@angular/router";
+import { FriendRequestComponent } from "./components/friendrequest/friendrequest.component";
+import { NotFoundComponent } from "./components/not-found/not-found.component";
 
 @NgModule({
   declarations: [
@@ -15,7 +18,10 @@ import { RouterModule } from "@angular/router";
     RegisterComponent,
     ValidationMessagesComponent,
     MarkAsTouchedDirective,
-    NavComponent
+    AvatarComponent,
+    NavComponent,
+    NotFoundComponent,
+    FriendRequestComponent
   ],
   imports: [CommonModule, ReactiveFormsModule, RouterModule],
   exports: [
@@ -23,7 +29,10 @@ import { RouterModule } from "@angular/router";
     RegisterComponent,
     ValidationMessagesComponent,
     HttpClientModule,
-    NavComponent
+    AvatarComponent,
+    NavComponent,
+    NotFoundComponent,
+    FriendRequestComponent
   ]
 })
 export class SharedModule {}

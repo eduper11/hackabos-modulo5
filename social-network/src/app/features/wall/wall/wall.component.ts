@@ -12,10 +12,18 @@ export class WallComponent implements OnInit {
 
   constructor(
     public userService: UserService,
-    private wallService: WallService
+    public wallService: WallService
   ) {} // si le poongo trabajo (el getwall.suscribe en el constructor) en el constructor, el componente va a tardar más en cargar
 
   ngOnInit() {
-    this.wallService.getWall().subscribe(posts => (this.posts = posts));
+    this.wallService.getWall().subscribe(); //suscribirse en el último paso siempre, no en el servicio, si no no va a dejar hacer modificaciones en ese objeto
+  }                                   //posts => (this.posts = posts) si no quisieramos guardar los post en el servicio
+
+  addPost(content) {
+    this.wallService.publish(content).subscribe();
+  }
+
+  addComment(postId, message) {
+    this.wallService.addComment(postId, message).subscribe();
   }
 }

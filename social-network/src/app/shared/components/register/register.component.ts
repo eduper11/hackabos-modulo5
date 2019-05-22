@@ -1,7 +1,7 @@
 import { Component } from "@angular/core";
 import { FormBuilder, Validators } from "@angular/forms";
 import { AuthService } from "src/app/core/services/auth.service";
-import { MatchPasswordValidator } from "../../components/validators/match-password.validator";
+import { MatchPasswordValidator } from "../../validators/match-password.validator";
 
 @Component({
   selector: "sn-register",

@@ -1,4 +1,15 @@
-<p class="bg-white">
-  wall works!
-  <sn-wall-card *ngFor=""></sn-wall-card>
-</p>
+<sn-publisher (publish)="addPost($event)"></sn-publisher>
+
+<section>
+  <article *ngFor="let post of wallService.posts">
+    <h1>{{ post.author?.fullName }}</h1>
+    <p>{{ post.content }}</p>
+    <small>{{ post.createdAt | date: "shortDate" }}</small>
+    <sn-publisher (publish)="addComment(post.id, $event)"></sn-publisher>
+    <ng-container *ngFor="let comment of post.comments">
+      <h3>{{ comment.author?.fullName }}</h3>
+      <p>{{ comment.message }}</p>
+      <small>{{ comment.createdAt | date: "shortDate" }}</small>
+    </ng-container>
+  </article>
+</section>

@@ -3,7 +3,7 @@ import { CommonModule } from "@angular/common";
 import { WallComponent } from "./wall/wall.component";
 import { Routes, RouterModule } from "@angular/router";
 import { LayoutModule } from "src/app/layout/layout.module";
-import { WallCardComponent } from "./wall-card/wall-card.component";
+import { PublisherComponent } from "./publisher/publisher.component";
 
 const routes: Routes = [
   {
@@ -13,7 +13,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [WallComponent, WallCardComponent],
+  declarations: [WallComponent, PublisherComponent],
   imports: [CommonModule, RouterModule.forChild(routes), LayoutModule]
 })
 export class WallModule {}
